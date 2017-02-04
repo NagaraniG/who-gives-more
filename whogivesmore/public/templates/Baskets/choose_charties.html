@@ -1,0 +1,112 @@
+<link rel="stylesheet" type="text/css" href="stylesheets/navbar.css">
+<link rel="stylesheet" type="text/css" href="stylesheets/choose_charties.css">
+
+
+
+
+<nav class="navbar navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse"
+        data-target="#myNavbar"><i class="fa fa-align-justify"></i>
+                  </button>
+        <img class=" img img-rounded" src="images/give-more.jpg"/>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav" id="first">
+          <li ng-click="leaderboard()">LEADERBOARD</li>
+          <li >MISSION AND VALUES</li>
+          <li >HOW IT WORKS</li>
+          <li >LOGIN</li>
+          <li  id="create-active"  >
+            <i class="fa fa-clipboard" ></i> &nbsp &nbspCreateAnAccount</li>
+          <li  id="create-active"><i class="fa fa-slideshare"></i>&nbsp &nbspJoinTeams</li>
+          <li id="one"><i class="fa fa-dribbble"></i>&nbsp &nbspChooseCharties
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+  </nav>
+<div class="container first">
+    <label class="option1">Option 1-Recommended Basket</label>
+    <div class="recommended" ng-init="recommended">
+    <input id="{{recommended.id}}" type="checkbox" value="{{recommended.id}}" ng-checked="" ng-click="toggleSelect(recommended.id)" ng-model="selectionrecommended">
+
+      <img class="img img-rounded" ng-src="{{recommended.picture.avatar}}"  />
+      <br/>
+      {{recommended.name}} 
+      {{recommended.id}}
+      <br/>
+      <p>We recommend this diverse basket of trusted charties carefully chosen for their high <br/>humanitarian imapact,financial responsibility  track record of ethical practices</p>
+      <button type="button" class="btn btn-success"  ng-click="chooseChartie()">  <span class="glyphicon glyphicon-ok"></span>&nbsp &nbsp Use this Basket</button>
+    </div>
+  </div>
+
+  <div class="container two" id="specialbasket">
+    <label class="option2">Option 2-Special Interest</label>
+    <div class="special">
+      <p>Or you can choose one or more baskets devoted to a specific cause</p>
+       <div class="row">
+        <div class=" col-xs-3 col-sm-3 col-md-3 col-lg-3" ng-repeat="avatar in avatars">
+        <input id="{{avatar.id}}" type="checkbox" value="{{avatar.id}}"  ng-click="toggleSelection(avatar.id)" ng-model="selectionspecial">
+          <img class="img img-rounded" ng-src="{{avatar.picture.avatar}}" id="img" /><br/>
+          {{avatar.name}}           
+        </div>
+        </div>
+         <button type="button" class="btn btn-success" ng-click="chooseCharties()">  <span class="glyphicon glyphicon-ok"></span>&nbsp &nbsp Use Seleccted Basket(s)</button>
+      </div>
+    </div>
+ <div class="container three">
+      <label class="option3">Option 3-customize </label>
+      <div class="custom row">
+
+      <button ng-click="customBasket()" class="btn btn-primary">Create your own Basket</button>
+        <div class="box1 col-xs-5 col-sm-5 col-md-5 col-lg-5">
+          <ul class="nav nav-tabs">
+            <li class="active"><a data-toggle="tab" href="javascript:void(0)/#home">Search</a></li>
+            <li><a data-toggle="tab" >Childern</a></li>
+            <li><a data-toggle="tab" >AidandRelief</a></li>
+            <li><a data-toggle="tab" >Poverty</a></li>
+            <li><a data-toggle="tab" >Environmental</a></li>
+          </ul>
+          <div class="tab-content">
+            <div id="home" class="tab-pane fade in active">    
+              <p><span class="glyphicon glyphicon-search">search</span></p>
+              <p>Search results 1</p>
+              <p>Search results 2</p>
+              <p>Search results 3</p>
+              <!-- <p>Search results 4</p>  -->
+            </div>
+          </div>
+        </div>
+
+        <div class="arrow col-xs-2 col-sm-2 col-md-2 col-lg-2">
+          <label> <span class="glyphicon glyphicon-arrow-right"></span></label>
+        </div>
+
+        <div class="box2 col-xs-5 col-sm-5 col-md-5 col-lg-5">
+         American Red cross
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" aria-valuenow="61%" aria-valuemin="0" aria-valuemax="100" style="width:61%">
+            </div>61%
+          </div>
+          Save the childern
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" aria-valuenow="29%"  aria-valuemin="0" aria-valuemax="100" style="width:29%">
+            </div>29%
+          </div>
+
+        American Cancer Society
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" aria-valuenow="10%"aria-valuemin="0" aria-valuemax="100" style="width:10%">
+            </div>10%
+        Total:100%
+          </div> 
+          <div class="total">
+            <label>Total:100%</label>
+          </div>
+        </div>
+      <button type="button" class="btn btn-success" ng-click="chooseCharties()" >  <span class="glyphicon glyphicon-ok"></span>&nbsp &nbsp Use Custom Basket</button>
+    </div> 
+  </div>

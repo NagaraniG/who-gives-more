@@ -1,0 +1,35 @@
+<%= form_for(@accountinformation) do |f| %>
+<div class="field">
+    <%= f.label :firstname%>
+    <%= f.text_field :first_name %>
+  </div>
+<div class="field">
+    <%= f.label :lastname %>
+    <%= f.text_field :last_name %>
+  </div>
+  <div class="field">
+    <%= f.label :address1 %>
+    <%= f.text_field :address1 %>
+  </div>
+  <div class="field">
+    <%= f.label :address2 %>
+    <%= f.text_field :address2 %>
+  </div>
+  <div class="field">
+    <%= f.label :zipcode %>
+    <%= f.number_field :zipcode %>
+  </div>
+  <div class="field">
+    <%= f.label :dob %>
+    <%= f.date_field :dob %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :user_id %>
+    <%= f.number_field :user_id %>
+  </div>
+  
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

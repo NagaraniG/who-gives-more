@@ -1,0 +1,38 @@
+@media only screen and (min-width: 320px){
+
+form{
+   margin-top: 70px;
+}
+
+}
+
+@media (min-width: 760px){
+
+
+
+
+#signup{
+  
+  width:520px; 
+}
+#login{
+  background-color: lightblue;
+}
+}
+@media (min-width: 1020px){
+  #signup{
+    width: 850px
+  }
+ /* input{
+    width: 20%;
+  }
+*/
+  form{
+    margin-top: 300px;
+    margin-left: 500px;
+  }
+  .form-group input{
+    width: 350px;
+  }
+
+}

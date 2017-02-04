@@ -1,0 +1,30 @@
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>ranking_type</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @competitions.each do |competition| %>
+      <tr>
+        <td><%= competition.name %></td>
+          <td><%= competition.ranking_type %></td>
+          <td><%= competition.end_date %>
+          <td><%= competition.no_end_date %>
+         <!--  <% @competitionteams.each# do |cteam| %>
+          <% #if competition.id==cteam.competition_id %>
+                    <td><%= cteam.team_id %>
+           <% #end %>
+           <% #end %> -->
+
+        <td><%= link_to 'Show',competition %></td>
+        <td><%= link_to 'Edit', edit_competition_path(competition) %></td>
+        <td><%= link_to 'Destroy', competition, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to 'New competition', new_competition_path %>

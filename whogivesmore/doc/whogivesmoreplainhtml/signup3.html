@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>WHOGIVESMORE</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="css/index.css">
+   <link rel="stylesheet" type="text/css" href="css/signup3.css">
+  <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse"
+        data-target="#myNavbar"><i class="fa fa-align-justify"></i>
+                  </button>
+        <img class=" img img-rounded" src="images/give-more.jpg"/>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav" id="first">
+          <li >LEADERBOARD</li>
+          <li >MISSION AND VALUES</li>
+          <li >HOW IT WORKS</li>
+          <li >LOGIN</li>
+          <li  id="create-active"  >
+            <i class="fa fa-clipboard" ></i> &nbsp &nbspCreateAnAccount</li>
+          <li  id="create-active"><i class="fa fa-slideshare"></i>&nbsp &nbspJoinTeams</li>
+          <li id="one"><i class="fa fa-dribbble"></i>&nbsp &nbspChooseCharties
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+  </nav>
+
+  <div class="container first">
+    <label class="option1">Option 1-Recommended Basket</label>
+    <div class="recommended">
+      <img class="img img-rounded" src="images/recom.jpeg"  /> <br/>
+      <p>We recommend this diverse basket of trusted charties carefully chosen for their high <br/>humanitarian imapact,financial responsibility  track record of ethical practices</p>
+      <button type="button" class="btn btn-success">  <span class="glyphicon glyphicon-ok"></span>&nbsp &nbsp Use this Basket</button>
+    </div>
+  </div>
+
+  <div class="container two" id="specialbasket">
+    <label class="option2">Option 2-Special Interest</label>
+    <div class="special">
+      <p>Or you can choose one or more baskets devoted to a specific cause</p>
+      <div class="row">
+        <div class=" col-xs-3 col-sm-3 col-md-3 col-lg-3">
+          <img class="img img-rounded" src="images/childern.jpeg" id="img" /><br/>
+            &nbsp &nbsp Childern
+        </div>
+        <div class=" col-xs-3 col-sm-3 col-md-3 col-lg-3">
+          <img class="img img-rounded " src="images/aid.jpg"  id="img"/><br/>
+          &nbsp &nbsp Aid and Relief
+        </div>
+        <div class=" col-xs-3 col-sm-3 col-md-3 col-lg-3">
+          <img class="img img-rounded " src="images/poverty.jpeg" id="img" /><br/>
+            &nbsp &nbsp Poverty
+        </div>
+        <div class=" col-xs-3 col-sm-3 col-md-3 col-lg-3">
+          <img class="img img-rounded " src="images/environmental.jpeg"  id="img"/><br/>
+        <h id="env">Environmental</h>
+        </div>
+      </div>
+        <div class="row">
+          <div class=" col-xs-3 col-sm-3 col-md-3 col-lg-3">
+            <img class="img img-rounded" src="images/health.jpeg"  id="img"/><br/>
+            &nbsp &nbsp Health
+          </div>
+          <div class=" col-xs-3 col-sm-3 col-md-3 col-lg-3">
+            <img class="img img-rounded " src="images/research.jpeg" id="img"/><br/>
+            &nbsp &nbsp Research
+          </div>
+          <div class=" col-xs-3 col-sm-3 col-md-3 col-lg-3">
+            <img class="img img-rounded " src="images/education.jpeg" id="img" /><br/>
+            &nbsp &nbspEducation
+          </div>
+          <div class=" col-xs-3 col-sm-3 col-md-3 col-lg-3">
+            <img class="img img-rounded " src="images/animal.jpeg" id="img" /><br/>
+            &nbsp &nbsp Animals
+          </div>
+        </div>
+        <button type="button" class="btn btn-success">  <span class="glyphicon glyphicon-ok"></span>&nbsp &nbsp Use Seleccted Basket(s)</button>
+      </div>
+
+    </div>
+  
+    <div class="container three">
+      <label class="option3">Option 3-customize </label>
+      <div class="custom row">
+        <div class="box1 col-xs-5 col-sm-5 col-md-5 col-lg-5">
+          <ul class="nav nav-tabs">
+            <li class="active"><a data-toggle="tab" href="#home">Search</a></li>
+            <li><a data-toggle="tab" >Childern</a></li>
+            <li><a data-toggle="tab" >AidandRelief</a></li>
+            <li><a data-toggle="tab" >Poverty</a></li>
+            <li><a data-toggle="tab" >Environmental</a></li>
+          </ul>
+          <div class="tab-content">
+            <div id="home" class="tab-pane fade in active">    
+              <p><span class="glyphicon glyphicon-search">search</span></p>
+              <p>Search results 1</p>
+              <p>Search results 2</p>
+              <p>Search results 3</p>
+              <!-- <p>Search results 4</p>  -->
+            </div>
+          </div>
+        </div>
+
+        <div class="arrow col-xs-2 col-sm-2 col-md-2 col-lg-2">
+          <label> <span class="glyphicon glyphicon-arrow-right"></span></label>
+        </div>
+
+        <div class="box2 col-xs-5 col-sm-5 col-md-5 col-lg-5">
+         American Red cross
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" aria-valuenow="61%" aria-valuemin="0" aria-valuemax="100" style="width:61%">
+            </div>61%
+          </div>
+          Save the childern
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" aria-valuenow="29%"  aria-valuemin="0" aria-valuemax="100" style="width:29%">
+            </div>29%
+          </div>
+
+        American Cancer Society
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" aria-valuenow="10%"aria-valuemin="0" aria-valuemax="100" style="width:10%">
+            </div>10%
+        Total:100%
+          </div> 
+          <div class="total">
+            <label>Total:100%</label>
+          </div>
+        </div>
+      <button type="button" class="btn btn-success">  <span class="glyphicon glyphicon-ok"></span>&nbsp &nbsp Use Custom Basket</button>
+    </div> 
+  </div>
+
+
+
+  <!-- <footer>
+    <div class="container-fluid">
+      <nav class="navbar navbar-bottom">
+        <ul class="nav navbar-nav">
+      <div class="footer row">
+        <div class="col-md-1 col-xs-1 col-lg-1 col-sm-1">
+          <h>FAQ</h>
+        </div>
+        <div class="col-md-3 col-xs-3 col-lg-3 col-sm-3">
+          <h> Meet our team</h>
+        </div>
+        <div class="col-md-3 col-xs-3 col-lg-3 col-sm-3">
+          <h> Terms of service</h>
+        </div>
+        <div class="col-md-1 col-xs-1 col-lg-1 col-sm-1">
+          <h> contact</h>
+        </div>
+        <div class="col-md-2 col-xs-2 col-lg-2 col-sm-2">
+          <h>Privacy policy</h>
+        </div>
+        <div class="col-md-2 col-xs-2 col-lg-2 col-sm-2">
+          <h>Legal information</h>
+        </div>
+      </div>
+    </div>
+  </footer> -->
+</body>
+</html>

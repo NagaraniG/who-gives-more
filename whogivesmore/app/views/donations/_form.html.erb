@@ -1,0 +1,42 @@
+<%= form_for(@donation) do |f| %>
+<div class="field">
+    <%= f.label :firstname_on_card %>
+    <%= f.text_field :firstname_on_card %>
+  </div>
+<div class="field">
+    <%= f.label :lastname_on_card %>
+    <%= f.text_field :lastname_on_card %>
+  </div>
+  <div class="field">
+    <%= f.label :card_number %>
+    <%= f.number_field :card_number %>
+  </div>
+  <div class="field">
+    <%= f.label :expiration_date %>
+    <%= f.date_field :expiration_date %>
+  </div>
+  <div class="field">
+    <%= f.label :cvv %>
+    <%= f.number_field :cvv %>
+  </div>
+  <div class="field">
+    <%= f.label :billing_address %>
+    <%= f.text_field :billing_address %>
+  </div>
+  <div class="field">
+    <%= f.label :amount %>
+    <%= f.number_field :amount %>
+  </div>
+  <div class="field">
+    <%= f.label :user_id %>
+    <%= f.number_field :user_id %>
+  </div>
+  <div class="field">
+    <%= f.label :team_id %>
+    <%= f.number_field :team_id %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

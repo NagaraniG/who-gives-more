@@ -1,0 +1,60 @@
+@media only screen and (min-width: 320px){
+.content1{
+  margin-top:70px;
+}
+.fa-window-restore ,.fa-plus-square-o{
+  font-size: 70px;
+}
+#dollar2{
+  margin-top: -10px;
+}
+}
+
+
+
+
+
+
+
+
+
+@media (min-width: 1000px){
+.container .content1{
+
+
+  margin-top: 150px;
+  margin-left: 300px;
+  font-weight: 25px;
+
+}
+
+.fa-window-restore,.fa-plus-square-o{
+  margin-top: 50px;
+  font-size: 100px;
+}
+.fa-plus-square-o {
+  margin-left: 100px;
+}
+
+.fa-window-restore{
+  margin-left: 250px;
+}
+.head1{
+  margin-left: 200px;
+}
+
+#dollar1{
+  margin-left: 240px;
+  color: green;
+  font-size: 25px;
+}
+#dollar2{
+  color: green;
+  font-size: 25px;
+  margin-left: 100px;
+}
+.content2{
+  margin-top: 50px;
+  margin-left: 300px;
+}
+}

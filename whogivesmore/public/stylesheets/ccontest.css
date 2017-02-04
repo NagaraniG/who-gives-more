@@ -1,0 +1,99 @@
+@media only screen and (min-width: 320px){
+.text{
+  margin-top: 50px;
+}
+
+.two{
+  margin-top: 20px;
+}
+
+#row2{
+  margin-top: 10px;
+  /*margin-left: 5px;*/
+}
+#row2 input{
+  margin-top: 50px;
+}
+}
+
+
+@media (min-width: 760px){
+ .text {
+  margin-top: 80px;
+}
+
+
+#row2 input{
+  margin-top: -20px;
+}
+
+
+.check select{
+  margin-left: -200px;
+}
+
+.first input{
+  width: 300px;
+  border: 2px solid black;
+}
+.checkbox{
+  margin-left: -580px;
+}
+#check{
+  margin-left: -80px;
+}
+.second{
+  margin-left: 400px;
+  margin-top: -140px;
+}
+
+.sselect{
+  margin-top: -20px;
+  margin-left: 50px;
+}
+
+#row1{
+  text-align: center;
+  /*margin-left: -40px;*/
+  padding:3px;
+}
+
+
+#two,#three,#four,#five{
+  /*margin: 3px;*/
+ /* border: 2px solid black;*/
+}
+#container1{
+  margin-top: 20px;
+}
+
+#row2{
+  margin-top:30px;
+  /*margin-left: 50px;*/
+}
+
+.btn-success{
+  margin-left: 100px;
+  margin-top: 20px;
+}
+}
+@media (min-width: 1020px){
+  .second{
+  margin-left: 550px;
+  margin-top: -140px;
+}
+.check{
+  /*margin:15px;*/
+  border: 2px solid black;
+  text-align: center;
+  padding-bottom: 5px; 
+  padding-top: 10px;
+}
+.container{
+  padding-bottom: 20px;
+  margin-left: 10px;
+}
+/*#row1 {
+  margin-left: -100px;
+}*/
+}

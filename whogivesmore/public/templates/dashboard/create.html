@@ -1,0 +1,46 @@
+<link rel="stylesheet" type="text/css" href="stylesheets/navbar.css">
+<link rel="stylesheet" type="text/css" href="stylesheets/create.css">
+
+
+<nav class="navbar navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar"><i class="fa fa-align-justify"></i>
+        </button>
+        <img class=" img img-rounded" src="images/give-more.jpg"/>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav" id="first">
+          <li class="one" ng-click="leaderboard()">LEADERBOARD</li>
+          <li >MISSION AND VALUES</li>
+          <li >HOW IT WORKS</li>
+          <li ng-click="logout()">logout</li>
+          <li id="recruit" ng-click="recruit()" ><i class="fa fa-group" ></i>&nbsp &nbsp RECRUIT
+          </li>
+          <li id="donate" ng-click="donate()"><i class="fa fa-dollar"></i>&nbsp &nbspDONATE</li>
+          <li id="dash" ng-click="dashboard()" ><i class="fa fa-empire"></i>&nbsp &nbspDASHBOARD
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+<div class="container">
+    <p class="content1">Content creation requires a donation to your chosen basket &nbsp &nbsp &nbspin order to prevent abuse and provide quality control </p>
+    <div class="row">
+      <div class="col-sm-6 col-md-6 col-lg-6 col-xs-6">
+        <a href="#!/ccontest"><i class="fa fa-window-restore" aria-hidden="true"></i></a><br/><br/><br/>
+        <label class="head1">Create a New Competition</label><br /><br/>
+        <i class="fa fa-usd " aria-hidden="true" id="dollar1">100</i>
+      </div>
+      <div class="col-sm-6 col-md-6 col-lg-6 col-xs-6">
+        <a href="#!/cteam"><i class="fa fa-plus-square-o" aria-hidden="true"></i></a><br/><br/>
+       <label class="head2">
+        Add a Team to an Existing Competiion</label><br /><br/>
+        <i class="fa fa-usd" aria-hidden="true" id="dollar2">25</i>
+      </div><br/><br/><br/>
+    </div><br/><br/>
+    <p class="content2">Please Review the Terms of  Service for conditions on custom content</p>
+  </div>
+<br/><br/><br/>
+

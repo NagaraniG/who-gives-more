@@ -1,0 +1,41 @@
+  <link rel="stylesheet" type="text/css" href="stylesheets/navbar.css">
+  <link rel="stylesheet" type="text/css" href="stylesheets/login.css">
+
+  <nav class="navbar navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse"
+        data-target="#myNavbar"><i class="fa fa-align-justify"></i>
+                  </button>
+        <img class=" img img-rounded" src="images/give-more.jpg"/>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav" id="first">
+          <li class="one" ng-click="leaderboard()">LEADERBOARD</li>
+          <li >MISSION AND VALUES</li>
+          <li >HOW IT WORKS</li>
+          <li id="login">LOGIN</li>
+          <li id="signup" ng-click="signup()">SignUp Now and Join the Competition</li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+
+<div class="container" >
+  <form ng-submit="signIn()">
+  <div class="form-group">
+    <label for="email">Email address:</label>
+    <input type="email" class="form-control" id="email" ng-model="email">
+  </div>
+  <div class="form-group">
+    <label for="pwd">Password:</label>
+    <input type="password" class="form-control" id="pwd" ng-model="password">
+  </div>
+  <div class="checkbox">
+    <label><input type="checkbox"> Remember me</label>
+  </div>
+  <button type="submit" class="btn btn-default">SIGNIN</button>
+</form>
+</div>

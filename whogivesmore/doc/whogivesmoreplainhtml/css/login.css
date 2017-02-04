@@ -1,0 +1,24 @@
+@media only screen and (min-width: 320px){
+
+
+
+}
+
+@media (min-width: 760px){
+
+
+
+
+#signup{
+	
+	width:520px; 
+}
+#login{
+	background-color: lightblue;
+}
+}
+@media (min-width: 1020px){
+  #signup{
+    width: 950px
+  }
+}

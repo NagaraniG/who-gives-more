@@ -1,0 +1,1 @@
+json.accountinformations! @accountinformations, partial: 'account_informations/account_information', as: :account_information

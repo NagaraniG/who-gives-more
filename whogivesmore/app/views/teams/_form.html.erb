@@ -1,0 +1,23 @@
+<%= form_for @team, :html => { :multipart => true } do |f| %>
+<div class="field">
+ <%= f.label :picture %>
+    <%= f.fields_for :picture do |photo| %>
+    <%= photo.file_field :avatar %>
+    <% end %>
+</div>
+<div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :description %>
+    <%= f.text_field :description %>
+  </div>
+
+ <div class="field">
+  <%= f.collection_select :competition_ids, Competition.all, :id, :name %>
+</div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

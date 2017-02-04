@@ -1,0 +1,30 @@
+<%= link_to 'New Basket', new_basket_path %>
+<table>
+  <thead>
+    <tr>
+      <th>picture</th>
+      <th>Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @baskets.each do |basket| %>
+      <tr>
+        <% @pictures.each do |pic| %>
+        <% if (pic.imageable_type=="Basket") %>
+        <% if(pic.imageable_id==basket.id) %>
+        <td><%= image_tag(pic.avatar)%></td>
+        <% end %>
+        <% end %>
+        <% end %>
+          <td><%= basket.name %></td>
+          <td><%= basket.custom %>
+        <td><%= link_to 'Show',basket %></td>
+        <td><%= link_to 'Edit', edit_basket_path(basket) %></td>
+        <td><%= link_to 'Destroy', basket, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+

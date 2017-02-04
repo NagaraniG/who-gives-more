@@ -1,0 +1,1 @@
+json.data @competitions, partial: 'competitions/competition', as: :competition

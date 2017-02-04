@@ -1,0 +1,27 @@
+<p>
+  <strong>Name:</strong>
+  <%=h @competition.name%>
+</p>
+<p>
+  <strong>ranking_type:</strong>
+  <%=h @competition.ranking_type %>
+</p>
+
+<p>
+  <strong>End_date:</strong>
+  <%=h @competition.end_date%>
+</p>
+
+<p>
+  <strong>No_end_date:</strong>
+  <%=h @competition.no_end_date%>
+</p>
+
+
+
+
+<p>
+  <%= link_to "Edit", edit_competition_path(@competition) %> |
+  <%= link_to "Destroy", @competition, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", competitions_path %>
+</p>

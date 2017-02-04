@@ -1,0 +1,28 @@
+
+
+<p>
+  <strong>Name:</strong>
+
+   <% if(@picture.imageable_id==@team.id) %>
+        <%= image_tag(@picture.avatar)%>
+  <% end %>
+  
+</p>
+<p>
+  <strong>Name:</strong>
+  <%=h @team.name %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%=h @team.description %>
+</p>
+
+
+
+
+<p>
+  <%= link_to "Edit", edit_team_path(@team) %> |
+  <%= link_to "Destroy", @team, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", teams_path %>
+</p>

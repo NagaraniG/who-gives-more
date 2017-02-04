@@ -1,0 +1,163 @@
+@media only screen and (min-width:320px){
+.headline{
+  margin-top:70px;
+}
+
+ #btn5{
+   display:block;
+  margin-left: 180px;
+  margin-top:-100px;
+  background-color: #ff0040;
+  
+}
+#btn2{
+  margin-left: 190px;
+  margin-top: -200px;
+}
+#p2{
+  margin-left: 190px;
+  margin-top: -90px;
+}
+
+#btn3{
+  background-color: yellow;
+  margin-left: 50px;
+}
+
+
+#p5{
+  margin-left: 100px;
+}
+
+#btn4{
+   background-color:  #cc00ff;
+  color:white;
+}
+#p5{
+  margin-left: 180px;
+}
+#btn7{
+  margin-left: 170px;
+  margin-top: -100px;
+  display: block;
+  background-color: #ffb31a;
+  color: white;
+}
+#p7{
+  margin-left: 150px;
+}
+#btn6{
+  background-color: #006666;
+  color: white;
+}
+.inside{
+  border: 1px solid black;
+  margin-top: -10px;
+  padding-top:10px;
+}
+
+.side h{
+  margin-left: 10px;
+  /*padding-bottom: 10px;*/
+  background-color: lightgray;
+}
+
+.firstbox,.secondbox,.thirdbox{
+  margin-top: 10px;
+}
+
+}
+
+@media(min-width:1000px){
+
+  .thirdline{
+    margin-left: 250px;
+  }
+  .headline{
+    margin-top: 100px;
+  }
+  .firstline{
+    margin-top:30px;
+  }
+  #btn1{
+    margin-left: 100px;
+    /*font-size: 18px;*/
+  }
+
+  #btn2{
+    /*font-size: 18px;*/
+    margin-left: 400px;
+  }
+#p1{
+  margin-left: 70px;
+}
+#p2{
+  margin-left: 360px;
+}
+#btn3{
+  /*font-size: 18px;*/
+}
+.secondline{
+  margin-left: 180px;
+}
+#btn4{
+  margin-left: -150px;
+  background-color:  #cc00ff;
+  color:white;
+  /*font-size: 20px;*/
+}
+#btn5{
+  /*font-size: 18px;*/
+
+}
+#p4{
+  margin-left: -150px;
+}
+#p5{
+  margin-left: 160px;
+}
+#btn6{
+  /*font-size: 18px;*/
+  margin-left: 100px
+}
+#btn7{
+  /*font-size: 18px;*/
+  margin-left: 450px;
+  margin-top: -97px;
+  /*display: block;*/
+}
+.lastline p{
+  margin-left: 160px;
+}
+#p7{
+  margin-left: 460px;
+}
+#p6{
+  margin-left: 80px;
+}
+
+
+.side{
+  margin-left: 850px;
+  margin-top:-500px;
+}
+
+.inside{
+  border: 1px solid black;
+  margin-top: -10px;
+  padding:15px;
+}
+.side h{
+  margin-left: 20px;
+  background-color: lightgray;
+}
+#edit{
+  background-color: lightgray;
+}
+.firstbox,.secondbox,.thirdbox{
+  margin-top: 20px;
+}
+#btn3,#btn4,#btn5,#btn6,#btn7{
+  /*border-radius: 10px;*/
+}
+}

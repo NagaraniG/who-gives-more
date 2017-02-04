@@ -1,0 +1,107 @@
+<link rel="stylesheet" type="text/css" href="stylesheets/navbar.css">
+<link rel="stylesheet" type="text/css" href="stylesheets/showcase.css">
+
+
+<nav class="navbar navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar"><i class="fa fa-align-justify"></i>
+        </button>
+        <img class=" img img-rounded" src="images/give-more.jpg"/>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav" id="first">
+          <li class="one" ng-click="leaderboard()">LEADERBOARD</li>
+          <li >MISSION AND VALUES</li>
+          <li >HOW IT WORKS</li>
+          <li ng-click="logout()">logout</li>
+          <li id="recruit" ng-click="recruit()" ><i class="fa fa-group" ></i>&nbsp &nbsp RECRUIT
+          </li>
+          <li id="donate" ng-click="donate()"><i class="fa fa-dollar"></i>&nbsp &nbspDONATE</li>
+          <li id="dash" ng-click="dashboard()" ><i class="fa fa-empire"></i>&nbsp &nbspDASHBOARD
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+<div class="container">
+  <label>Nagarani Gorantla</label>
+  <button class="btn btn-md">Edit my settings</button>
+    <div class="row one">
+      <div class="col-xs-3 col-md-3 col-lg-3 col-sm-3">
+        <img class="img img-circle" src="" id="img" />
+      </div>
+      <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
+        <h>Teams</h>
+        <div class="row firstrow">
+          <div class="col-xs-3 col-lg-3 col-sm-3 col-md-3" ng-repeat="team in teamsitem">
+            <img class="img img-rounded" ng-src="{{team.picture.avatar}}" id="img1"><br/>{{team.name}}
+          
+          </div>
+         
+        </div>
+      </div>
+    </div>
+    <div class="row two">
+      <div class="col-xs-3 col-md-3 col-lg-3 col-sm-3">
+        <h>favorite charity</h><br/>
+        <i class="fa fa-plus-square" aria-hidden="true"></i><br/>
+        <h>Doctors without borders</h>
+      </div>
+      <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
+        <h>Achievement Badges</h>
+        <div class="row secondrow">
+          <div class="col-xs-2 col-lg-2 col-sm-2 col-md-2">
+            <i class="fa fa-usd" aria-hidden="true"></i><br/>
+            <h>Giver<br/>Level 1</h>
+          </div>
+          <div class="col-xs-2 col-lg-2 col-sm-2 col-md-2">
+            <i class="fa fa-hourglass-half" aria-hidden="true"></i><br/>
+            <h>Sustainer<br/>Level 7</h>
+          </div>
+          <div class="col-xs-2 col-lg-2 col-sm-2 col-md-2">
+            <i class="fa fa-users" aria-hidden="true"></i><br/>
+            <h>Recruiter<br/>Level 1</h>
+          </div>
+          <div class="col-xs-2 col-lg-2 col-sm-2 col-md-2">
+            <i class="fa fa-odnoklassniki" aria-hidden="true"></i><br/>
+            <h>Competitior<br/>Level 3</h>
+          </div>
+          <div class="col-xs-2 col-lg-2 col-sm-2 col-md-2">
+            <i class="fa fa-hand-paper-o" aria-hidden="true"></i><br/>
+            <h>Benefactor<br/>Level 10</h>
+          </div>
+          <div class="col-xs-2 col-lg-2 col-sm-2 col-md-2">
+            <i class="fa fa-smile-o" aria-hidden="true"></i><br/>
+            <h id="ext">Supporter<br/>Level 1</h>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row third">
+      <div class="col-md-3 col-xs-3 col-lg-3 col-sm-3">
+        <i class="fa fa-facebook" aria-hidden="true"></i><br/>
+        Nagrani on facebook
+      </div>
+      <div class="col-md-9 col-xs-9 col-sm-9 col-lg-9">
+        <h>Campaign Medals</h>
+        <div class="row thirdone">
+          <div class="col-md-3 col-xs-3 col-lg-3 col-sm-3">
+            <i class="fa fa-bitbucket" aria-hidden="true"></i>
+            Coastal Cleanup
+          </div>
+        </div>
+        <div class="row four">
+          <h>Impact Album</h>
+          <div class="row fourone">
+            <div class="col-xs-12 col-md-12 col-sm-12 col-lg-12">
+              <i class="fa fa-play-circle-o" aria-hidden="true"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      </div>
+     
+     
+  </div>

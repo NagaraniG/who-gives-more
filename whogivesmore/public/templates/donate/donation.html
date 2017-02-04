@@ -1,0 +1,130 @@
+<link rel="stylesheet" type="text/css" href="stylesheets/navbar.css">
+<link rel="stylesheet" type="text/css" href="stylesheets/donate.css">
+
+<nav class="navbar navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar"><i class="fa fa-align-justify"></i>
+        </button>
+        <img class=" img img-rounded" src="images/give-more.jpg"/>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav" id="first">
+          <li class="one" ng-click="leaderboard()">LEADERBOARD</li>
+          <li >MISSION AND VALUES</li>
+          <li >HOW IT WORKS</li>
+          <li ng-click="logout()">logout</li>
+          <li id="recruit" ng-click="recruit()" ><i class="fa fa-group" ></i>&nbsp &nbsp RECRUIT
+          </li>
+          <li id="donate" ng-click="donate()"><i class="fa fa-dollar"></i>&nbsp &nbspDONATE</li>
+          <li id="dash" ng-click="dashboard()"><i class="fa fa-empire"></i>&nbsp &nbspDASHBOARD
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+
+
+
+<div class="container">
+    <label class="text">Donation Processing</label>
+    <div class="row">
+    <div class="left col-sm-6 col-md-6 col-lg-6 ">
+      <form class="form-horizontal" ng-submit="donate()">
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="text">First Name on Card:</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="email" placeholder="first name on card" ng-model="firstname_on_card" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="text">Second Name on Card:</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="pwd" placeholder="second name on card" ng-model="lastname_on_card" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="number">Card Number:</label>
+          <div class="col-sm-10">
+            <input type="number" class="form-control" id="pwd" placeholder="xxxx-xxxx-xxxx-xxxx" ng-model="card_number" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="date">Expiration Date:</label>
+          <div class="col-sm-10">
+              <input type="date" class="form-control" id="pwd" placeholder="second name on card" ng-model="expiration_date" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="number">cvv:</label>
+          <div class="col-sm-10">
+            <input type="number" class="form-control" id="pwd" placeholder="cvv" ng-model="cvv" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="text">Billing address:</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="pwd" placeholder="Name" ng-model="billing_address" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="number"></label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="pwd" placeholder="address1">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="number"></label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="pwd" placeholder="address2" >
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="number"></label>
+          <div class="col-sm-10">
+            <input type="number" class="form-control" id="pwd" placeholder="zipcode">
+          </div>
+        </div>
+      </form>
+    </div>
+<br/>
+    <div class="right col-sm-6 col-md-6 col-lg-6">
+      <form >
+        <label class="radio-inline">
+        <input name="radioGroup" id="radio1" value="option1" type="radio" checked="checked"> Donate to my selected charity basket
+        </label><br/>
+
+        <label class="radio-inline">
+        <input name="radioGroup" id="radio1" value="option1" type="radio" > Donate to the special campaign 
+        for flood relief in chennai
+        </label>
+        <br/>
+
+        <select class="dropdown"  ng-model="team_id" >
+            <option ng-value="" active>select your team</option>
+            <option  ng-repeat="x in teams" value="{{x.team.id}}">{{x.team.name}}</option>
+          </select>
+
+        <select>
+          <option value="0%">0%</option>
+          <option value="25%">25%</option>
+          <option value="75%">75%</option>
+          <option value="50%">50%</option>
+        </select>Tip? 
+        <br/>
+        <p>Please consider a small tip to help cover oue expenses!<br/>
+          Tippers will earn a specail achievement medal for your showcase</p>
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="number"></label>
+          <div class="col-sm-10">
+            <input type="number" class="form-control" id="pwd" placeholder="$" ng-model="amount" required>
+          </div>
+        </div><br/>
+        <button type="submit"  class="btn btn-success" ng-click="donate()" href="#!/thankyou">Donate once </button><br/><br/>
+        <button type="submit" class="btn btn-success" ng-click="donate()" href="#!/thankyou">Recurring monthly Donation!</button>
+      </form>
+    </div>
+  </div>
+</div>

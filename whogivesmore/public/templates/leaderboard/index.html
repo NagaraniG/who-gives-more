@@ -1,0 +1,124 @@
+<link rel="stylesheet" type="text/css" href="stylesheets/navbar.css">
+<link rel="stylesheet" type="text/css" href="stylesheets/leaderboard.css">
+
+
+
+<nav class="navbar navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar"><i class="fa fa-align-justify"></i>
+        </button>
+        <img class=" img img-rounded" src="images/give-more.jpg"/>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav" id="first">
+          <li class="one" ng-click="leaderboard()">LEADERBOARD</li>
+          <li >MISSION AND VALUES</li>
+          <li >HOW IT WORKS</li>
+          <li ng-click="logout()">logout</li>
+          <li id="recruit" ng-click="recruit()" ><i class="fa fa-group" ></i>&nbsp &nbsp RECRUIT
+          </li>
+          <li id="donate" ng-click="donate()"><i class="fa fa-dollar"></i>&nbsp &nbspDONATE</li>
+          <li id="dash" ng-click="dashboard()" ><i class="fa fa-empire"></i>&nbsp &nbspDASHBOARD
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+
+<div class="container first">
+    <div class="total">
+      <p class="text1">Together we have given </p>
+      <label><i class="fa fa-usd" aria-hidden="true" ng-init="total">{{total}}</i></label>
+      <p class="text2">in the spirit of goodwill and friendly competition</p>
+      <h2>Top 3 Competition Teams donors</h2>
+    </div>
+  </div>
+
+  
+
+
+<div class="container second">
+  <br>
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="javascript:void(0)/#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="javascript:void(0)/#myCarousel" data-slide-to="1"></li>
+      <li data-target="javascript:void(0)/#myCarousel" data-slide-to="2"></li>
+      
+    </ol>
+
+    <!-- Wrapper for slides -->
+
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <div class="competition">
+
+        <h3>Competition name</h3>
+         <h4  ng-repeat=" competition in firstteam.competitions">{{competition.name}}  </h4>
+       </div>
+       <div class="team">
+        <h3>Team name</h3>
+        <h4>{{firstteam.name}}</h4>
+        <h3>Team description</h3>
+        <h4>{{firstteam.description}}</h4>
+        </div>
+        <img src="{{firstteam.picture.avatar}}" alt="Chania" width="460" height="345">
+
+       
+
+        
+      </div>
+
+      <div class="item">
+        <div class="competition">
+        <h3>Competition Name</h3>
+         <h4   ng-repeat=" competition in secondteam.competitions">{{competition.name}}
+        </h4>
+      </div>
+             <div class="team">
+
+        <h3>Team name</h3>
+        <h4>{{secondteam.name}}</h4>
+        <h3>Team description</h3>
+        <h4>{{secondteam.description}}</h4>
+      </div>
+        <img src="{{secondteam.picture.avatar}}" alt="Chania" width="460" height="345">
+        
+      </div>
+    
+      <div class="item">
+        <div class="competition">
+
+        <h3>Competition Name</h3>
+        <h4 ng-repeat=" competition in thirdteam.competitions"> {{competition.name}}
+        </h4>
+      </div>
+             <div class="team">
+
+    <h3>Team name</h3>
+        <h4>{{thirdteam.name}}</h4>
+      <h3>Team description</h3>
+        <h4>{{thirdteam.description}}</h4>
+      </div>
+        <img src="{{thirdteam.picture.avatar}}" alt="Flower" width="460" height="345">
+         
+      </div>
+
+      
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="javascript:void(0)/#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="javascript:void(0)/#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>

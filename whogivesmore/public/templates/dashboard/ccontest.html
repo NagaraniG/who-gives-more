@@ -1,0 +1,148 @@
+<link rel="stylesheet" type="text/css" href="stylesheets/navbar.css">
+<link rel="stylesheet" type="text/css" href="stylesheets/ccontest.css">
+<nav class="navbar navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar"><i class="fa fa-align-justify"></i>
+        </button>
+        <img class=" img img-rounded" src="images/give-more.jpg"/>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav" id="first">
+          <li class="one" ng-click="leaderboard()">LEADERBOARD</li>
+          <li >MISSION AND VALUES</li>
+          <li >HOW IT WORKS</li>
+          <li ng-click="logout()">logout</li>
+          <li id="recruit" ng-click="recruit()" ><i class="fa fa-group" ></i>&nbsp &nbsp RECRUIT
+          </li>
+          <li id="donate" ng-click="donate()"><i class="fa fa-dollar"></i>&nbsp &nbspDONATE</li>
+          <li id="dash" ng-click="dashboard()" ><i class="fa fa-empire"></i>&nbsp &nbspDASHBOARD
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+
+
+ <div class="container"><br/><br/>
+    <label class="text">New Competition</label>
+    <div class="first">
+      <form class="form-horizontal">
+        <div class="form-group">
+          <label class="control-label col-sm-2 col-xs-4 col-md-2 col-lg-2" for="text">Competition Category:</label>
+          <div class="col-sm-10 col-lg-10 col-xs-8 col-md-10">
+            <input type="text" class="form-control" id="email" placeholder="Enter competition name" ng-model="competition_name">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label col-sm-2 col-xs-4 col-md-2 col-lg-2" for="date">End date:</label>
+          <div class="col-sm-10 col-lg-10 col-xs-8 col-md-10">
+            <input type="date" class="form-control" id="pwd" placeholder="dd/mm/yyyy" ng-model="end_date"><i class="fa fa-calendar" aria-hidden="true"></i>
+             <input type="checkbox" id="check" ng-model="no_end_date" /> No end date
+          </div>
+          <div class="col-sm-2 col-xs-3 col-md-2 col-lg-2 ">
+            <div class="checkbox">
+             
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label col-sm-2 col-xs-4 col-md-2 col-lg-2" for="date">Number of Teams:</label>
+          <div class="col-sm-10 col-lg-10 col-xs-8 col-md-10">
+            <input type="number" class="form-control" id="pwd" placeholder="3">
+          </div>
+        </div>
+     </form>
+    </div>
+    <div class="second">
+      <div class="check">
+        <input type="checkbox" id="checked" /> 
+        Create a sub competition with an existing team<br/>
+         <select class="dropdown"  ng-model="team_id" placeholder="select any team"> 
+          <option value="" active>select any team</option> 
+          <option  ng-repeat ="x in teams" ng-value="{{x.team.id}}">{{x.team.name}}</option>
+          </select>
+      </div><br />
+      <select class="sselect" ng-model="ranking_type">
+       <option value="">ranking_type</option>
+        <option value="per capita">Per capita</option>
+        <option value="per member">Per member</option>
+        <option value="raw total">Raw total</option>
+      </select> 
+    </div>
+    <br/><br/>
+ 
+       <div class="row" id="row1">
+      <div class="col-sm-2 col-xs-1 col-md-2 col-lg-2" id="one">
+        <p> Team 1</p>
+      </div>
+      <div class="col-sm-2 col-xs-2 col-md-2 col-lg-2" id="two">
+        <p>upload logo</p>
+      </div>
+      <div class="col-sm-2 col-xs-2 col-md-2 col-lg-2" id="three">
+        <p><input type="text" ng-model="team_name" placeholder="enter team name"/></p>
+      </div>
+      <div class="col-sm-3 col-xs-3 col-md-3 col-lg-3" id="four">
+        <p> <input type="text" ng-model="team_description" placeholder="enter team description"/></p>
+      </div>
+      <div class="col-sm-2 col-xs-3 col-md-2 col-lg-2" id="five">
+        <p> Population</p>
+      </div>
+      <div class="col-sm-1 col-xs-1 col-md-1 col-lg-1" >
+        <p> <input type="checkbox"> join</p>
+      </div>
+    </div>
+ 
+    <div class="row" id="row1">
+      <div class="col-sm-2 col-xs-1 col-md-2 col-lg-2" id="one">
+        <p> Team 2</p>
+      </div>
+      <div class="col-sm-2 col-xs-2 col-md-2 col-lg-2" id="two">
+        <p>upload logo</p>
+      </div>
+      <div class="col-sm-2 col-xs-2 col-md-2 col-lg-2" id="three">
+        <p><input type="text" ng-model="team_name" placeholder="enter team name"/></p>
+      </div>
+      <div class="col-sm-3 col-xs-3 col-md-3 col-lg-3" id="four">
+        <p> <input type="text" ng-model="team_description" placeholder="enter team description"/></p>
+      </div>
+      <div class="col-sm-2 col-xs-3 col-md-2 col-lg-2" id="five">
+        <p> Population</p>
+      </div>
+      <div class="col-sm-1 col-xs-1 col-md-1 col-lg-1" >
+        <p> <input type="checkbox"> join</p>
+      </div>
+    </div>
+    <div class="row" id="row1">
+      <div class="col-sm-2 col-xs-1 col-md-2 col-lg-2" id="one">
+        <p> Team 3</p>
+      </div>
+      <div class="col-sm-2 col-xs-2 col-md-2 col-lg-2" id="two">
+        <p>upload logo</p>
+      </div>
+      <div class="col-sm-2 col-xs-2 col-md-2 col-lg-2" id="three">
+        <p><input type="text" ng-model="team_name" placeholder="enter team name"/></p>
+      </div>
+      <div class="col-sm-3 col-xs-3 col-md-3 col-lg-3" id="four">
+        <p> <input type="text" ng-model="team_description" placeholder="enter team description"/></p>
+      </div>
+      <div class="col-sm-2 col-xs-3 col-md-2 col-lg-2" id="five">
+        <p> Population</p>
+      </div>
+      <div class="col-sm-1 col-xs-1 col-md-1 col-lg-1" >
+        <p> <input type="checkbox"> join</p>
+      </div>
+    </div>
+    <div class="row" id="row2">
+      <div class="col-sm-6 col-xs-6 col-lg-6 col-md-6">
+      <p>WhoGivesMore? does not allow competitions based on race,gender,sexual orientation, and similar characterstics We compete in a spirit of goodwill for fun and help to others</p>
+      </div>
+      <div class="col-sm-6 col-xs-6 col-lg-6 col-md-6">
+        <input type="checkbox">This content complies with the Terms of Service<br/>
+        <button type="submit" class="btn btn-success" ng-click="createCompetition()">Create Competition</button>
+      </div>
+    </div>
+    </div>
+  <br/><br/>

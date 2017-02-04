@@ -1,0 +1,34 @@
+<table>
+  <thead>
+    <tr>
+      <th>Firstname_on_card</th>
+      <th>Lastname_on_card</th>
+      <th>card_number</th>
+      <th>expiration_date</th>
+      <th>cvv</th>
+      <th>billing_address</th>
+      <th>user_id</th>
+      <th>team_id</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @donations.each do |donation| %>
+      <tr>
+        <td><%= donation.firstname_on_card %></td>
+          <td><%= donation.lastname_on_card %></td>
+          <td><%= donation.card_number %>
+          <td><%= donation.expiration_date %>
+          <td><%= donation.cvv %>
+          <td><%= donation.billing_address %>
+          <td><%= donation.user_id%>
+          <td><%= donation.team_id %>
+        <td><%= link_to 'Show',donation %></td>
+        <td><%= link_to 'Edit', edit_donation_path(donation) %></td>
+        <td><%= link_to 'Destroy', donation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to 'New donation', new_donation_path %>

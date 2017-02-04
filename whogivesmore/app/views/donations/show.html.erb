@@ -1,0 +1,41 @@
+<p>
+  <strong>FirstName_on_card:</strong>
+  <%=h @donation.firstname_on_card%>
+</p>
+<p>
+  <strong>LastName_on_card:</strong>
+  <%=h @donation.lastname_on_card%>
+</p>
+<p>
+  <strong>card_number</strong>
+  <%=h @donation.card_number %>
+</p>
+<p>
+  <strong>Expiration_on_date:</strong>
+  <%=h @donation.expiration_date%>
+</p>
+<p>
+  <strong>CVV:</strong>
+  <%=h @donation.cvv%>
+</p>
+<p>
+  <strong>billing_address:</strong>
+  <%=h @donation.billing_address%>
+</p>
+<p>
+  <strong>Amount</strong>
+  <%=h @donation.amount%>
+</p>
+<p>
+  <strong>User_id:</strong>
+  <%=h @donation.user_id%>
+</p>
+<p>
+  <strong>Team_id</strong>
+  <%=h @donation.team_id%>
+</p>
+<p>
+  <%= link_to "Edit", edit_donation_path(@donation) %> |
+  <%= link_to "Destroy", @donation, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", donations_path %>
+</p>

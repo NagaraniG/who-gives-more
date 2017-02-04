@@ -1,0 +1,36 @@
+@media only screen and (min-width: 320px){
+
+#yellow{
+  background-color: lightblue;
+  color: yellow;
+}
+
+#onlyyellow{
+  background-color: yellow;
+  margin-left:  5px;
+}
+
+
+}
+
+@media(min-width: 1000px){
+
+  #onlyyellow{
+    margin-left: -15px
+  }
+}
+
+
+
+
+
+
+
+
+/*#row1{
+  border: 2px solid black;
+  background-color: #00ffff;
+}
+#col5,#col6{
+  background-color: lightblue;
+}*/

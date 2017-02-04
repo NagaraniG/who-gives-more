@@ -1,0 +1,26 @@
+<p>
+  <strong>Name:</strong>
+
+   <% if(@picture.imageable_id==@basket.id) %>
+        <%= image_tag(@picture.avatar)%>
+ 
+  <% end %>
+</p>
+<p>
+  <strong>Name:</strong>
+  <%=h @basket.name %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%=h @basket.custom %>
+</p>
+
+
+
+
+<p>
+  <%= link_to "Edit", edit_basket_path(@basket) %> |
+  <%= link_to "Destroy", @basket, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", baskets_path %>
+</p>

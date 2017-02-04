@@ -1,0 +1,14 @@
+<% title "User" %>
+
+<p>
+  <strong>Name:</strong>
+  <%=h @user.first_name %>
+  <%=h @user.last_name %>
+  <%=h @user.date %>
+  <%=h @user.email %>
+  <%=h @user.password %>
+    
+</p>
+<p>
+ <%= link_to "Edit", edit_user_registeration_path(@user) %>
+ </p>

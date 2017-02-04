@@ -1,0 +1,143 @@
+@media only screen and (min-width: 320px){
+
+.option1{
+  margin-top: 70px;
+}
+
+#env{
+  margin-left: -30px;
+}
+
+.one img{
+  height: 30%;
+  width: 60%;
+}
+
+.option2{
+  margin-top: 30px;
+}
+
+
+.row img{
+  width: 50px;
+  height: 100px;
+}
+
+.option3{
+  margin-top: 30px;
+}
+
+   .btn-success{
+    margin-top: 50px;
+    margin-left: -15px;
+  }
+  .arrow{
+    width: 40px;
+    margin-top: 125px;
+    background-color: white;
+  }
+
+}
+
+@media (min-width: 760px){
+  .first{
+    margin-top: 60px;
+  }
+  .first .option1 {
+    /*margin-top: 100px;*/
+    margin-left: 50px;
+    background-color: white;
+    /*border: 1px solid black;*/
+  }
+  .recommended{
+    margin-top: -15px;
+    border: 1px solid black;
+
+
+
+  }
+  .row img{
+    margin:10px;
+  }
+  .first img{
+    height: 180px;
+    width: 150px;
+    margin-left: 50px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+
+  .custom .btn-success{
+    margin-top: 30px;
+  }
+  .first p{
+    margin-left: 250px;
+    margin-top: -100px;
+  }
+  .first .btn-success{
+    margin-left: 450px;
+    margin-bottom: 10px;
+
+  }
+
+  .row img{
+    height: 180px;
+    width: 150px;
+    margin-left: 30px;
+  }
+
+  .special{
+    margin-top: -15px;
+    border: 1px solid black;
+  }
+
+  .option2{
+    margin-left: 100px;
+    background-color: white;
+  }
+
+  .two .btn-success{
+    margin-left: 450px;
+    margin-bottom: 10px
+  }
+
+  .special p{
+    margin-top: 10px;
+    margin-left: 30px;
+  }
+  .option3{
+    margin-left: 100px;
+    background-color: white;
+  }
+  .custom{
+    border: 1px solid black;
+    margin-top: -15px;
+  }
+
+  .box1,.box2{
+    margin-top: 30px;
+    margin-left: 40px;
+    padding-top: 10px;
+    border:0.5px solid black;
+  }
+  .three .btn-success{
+    margin-left: 450px;
+    margin-bottom: 10px;
+  }
+}
+
+@media (min-width: 1020px){
+  .first{
+    margin-top: 30px;
+  }
+}
+
+
+
+
+
+
+
+
+
+

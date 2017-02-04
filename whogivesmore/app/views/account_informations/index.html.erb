@@ -1,0 +1,32 @@
+<table>
+  <thead>
+    <tr>
+      <th>Firstname</th>
+      <th>Lastname</th>
+      <th>address1</th>
+      <th>address2</th>
+      <th>zipcode</th>
+      <th>dob</th>
+      <th>user_id</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @accountinformations.each do |account| %>
+      <tr>
+        <td><%= account.firstname %></td>
+          <td><%= account.lastname %></td>
+          <td><%= account.address1 %>
+          <td><%= account.address2 %>
+          <td><%= account.zipcode %>
+          <td><%= account.dob %>
+          <td><%= account.user_id%>
+        <td><%= link_to 'Show',account_inofrmation %></td>
+        <td><%= link_to 'Edit', edit_account_inormation_path(account_inofrmation) %></td>
+        <td><%= link_to 'Destroy', account_inofrmation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to 'New Account info', new_account_information_path %>

@@ -1,0 +1,52 @@
+@media only screen and (min-width: 320px){
+
+.container{
+  margin-top: 50px;
+}
+
+
+}
+
+
+@media (min-width: 760px){
+.text{
+  margin-top:40px;
+}
+
+.left{
+  margin-top: 35px;
+  margin-left: 100px;
+
+ 
+}
+.form-group input {
+  width:200px;
+  border: 2px solid black;
+}
+
+.right{
+  -moz-margin-start: 370px;
+  margin-top: -400px;
+}
+
+.right{
+ -webkit-margin-start: 550px;
+/* -webkit-margin-before:50px;*/
+
+}
+
+.right .form-control{
+  margin-left: 70px;
+}
+.right button{
+  border: 2px solid black;
+}
+
+}
+
+@media (min-width: 1020px){
+  .right{
+  -moz-margin-start: 470px;
+  margin-top: -400px;
+}
+}

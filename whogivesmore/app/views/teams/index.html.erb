@@ -1,0 +1,34 @@
+<%= link_to 'New team', new_team_path %>
+
+<%= javascript_include_tag 'teams' %>
+<div class="container" ng-app="teamsCenter">
+
+<div ng-controller="teamsController">
+
+<div ng-repeat="team in teams" ng-model="teams">
+
+<p> Id:{{team.id}} </p>
+<p>title:{{team.name}}</p>
+<p>body:{{team.description}}</p>
+</div>
+
+</div>
+</div>
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+<%= link_to 'done', charties_path %>
+
+
+<%= link_to 'sign out',  destroy_user_session_path,method: :delete %>

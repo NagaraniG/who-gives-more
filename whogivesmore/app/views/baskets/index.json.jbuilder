@@ -1,0 +1,1 @@
+json.data @baskets, partial: 'baskets/basket', as: :basket

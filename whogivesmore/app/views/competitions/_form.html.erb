@@ -1,0 +1,25 @@
+<%= form_for(@competition) do |f| %>
+<div class="field">
+    <%= f.label :Name %>
+    <%= f.text_field :name %>
+  </div>
+<div class="field">
+    <%= f.label :ranking_type %>
+    <%= f.text_field :ranking_type %>
+  </div>
+  <div class="field">
+    <%= f.label :end_date %>
+    <%= f.date_field :end_date %>
+  </div>
+ <div class="field">
+    <%= f.label :no_end_date %> <br />
+    <%= f.check_box :no_end_date %> <br />
+</div>
+<div class="field">
+  <%= f.collection_select :team_ids, Team.all, :id, :name %>
+</div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

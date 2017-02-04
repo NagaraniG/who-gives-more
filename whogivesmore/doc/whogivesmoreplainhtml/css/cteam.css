@@ -1,0 +1,68 @@
+@media only screen and (min-width: 320px){
+
+.text{
+  margin-top: 70px;
+}
+#row2{
+  margin-top: 20px;
+}
+#row2 input{
+  margin-top: 30px;
+}
+
+}
+
+
+
+
+
+@media (min-width: 1000px){
+.container .text{
+  margin-top: 150px;
+  margin-left: 100px;
+}
+.select{
+margin-left: 100px;
+}
+.container #row1{
+  margin-top: 50px;
+}
+#no1{
+  
+  border: 2px solid black;
+  text-align: center;
+  margin:3px;
+  margin-left: 70px
+}
+
+#two{
+   margin:3px;
+  border: 2px solid black;
+  text-align: center;
+}
+
+#three{
+   margin:3px;
+  border: 2px solid black;
+  text-align: center;
+}
+#four{
+   margin:3px;
+  border: 2px solid black;
+  text-align: center;
+}
+#five{
+
+  font-size: 20px;
+}
+
+#row2{
+  margin-top: 150px;
+  margin-left: 100px;
+}
+
+.btn-success{
+  margin-left: 100px;
+  margin-top: 20px;
+}
+}

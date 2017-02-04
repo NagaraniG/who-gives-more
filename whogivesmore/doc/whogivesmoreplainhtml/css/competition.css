@@ -1,0 +1,77 @@
+@media only screen and (min-width: 320px){
+.text{
+  margin-top:50px;
+}
+.row img{
+  height: 150px;
+  width: 120px;
+  padding-right: 25px;: 
+}
+#one{
+  margin-left: 20px;
+  padding-left: 10px;
+  padding-top: 3px;
+  border: 1px solid black;
+  background-color: lightyellow;
+
+}
+#two{
+  padding-top: 3px;
+  margin-top: 10px;
+  margin-left: 25px;
+  padding-left: 10px;
+  border: 1px solid black;
+}
+
+.second .row{
+  border: 1px solid black;
+  margin-top: 10px;
+}
+}
+
+@media (min-width: 760px){
+
+#signup{
+  width:520px; 
+}
+
+.container .text{
+  margin-top: 100px;
+}
+
+
+footer{
+  margin-top: 70px;
+}
+#win{
+  height: 100px;
+  width: 180px;
+}
+
+#one{
+  margin-left: -50px;
+}
+#two{
+  margin-left: -50px;
+}
+
+
+.second{
+  
+  margin-top: 50px;
+}
+#second{
+  
+  padding-top: 5px;
+  text-align: center;
+
+   border: 1.4px solid black;
+
+}
+}
+
+@media (min-width: 1020px){
+ #signup{
+  width:950px; 
+} 
+}

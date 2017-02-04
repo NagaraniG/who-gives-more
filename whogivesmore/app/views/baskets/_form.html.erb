@@ -1,0 +1,22 @@
+<%= form_for(@basket) do |f| %>
+
+<div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :custom %>
+    <%= f.check_box :custom %>
+  </div>
+  <div class="field">
+
+  <%= f.label :picture %>
+    <%= f.fields_for :picture do |photo| %>
+    <%= photo.file_field :avatar %>
+    <% end %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

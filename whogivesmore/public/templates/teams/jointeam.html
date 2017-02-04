@@ -1,0 +1,124 @@
+<link rel="stylesheet" type="text/css" href="stylesheets/navbar.css">
+<link rel="stylesheet" type="text/css" href="stylesheets/jointeam.css">
+
+<nav class="navbar navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse"
+        data-target="#myNavbar"><i class="fa fa-align-justify"></i>
+                  </button>
+        <img class=" img img-rounded" src="images/give-more.jpg"/>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav" id="first">
+          <li class="one" ng-click="leaderboard()">LEADERBOARD</li>
+          <li >MISSION AND VALUES</li>
+          <li >HOW IT WORKS</li>
+          <li >LOGIN</li>
+          <li id="create-active" >
+            <i class="fa fa-clipboard" ></i> &nbsp &nbspCreateAnAccount</li>
+          <li  id="one" ><i class="fa fa-slideshare"></i>&nbsp &nbspJoinTeams</li>
+          <li id="create-active" ><i class="fa fa-dribbble"></i>&nbsp &nbspChooseCharties
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <div class="container">
+    <ul class="nav nav-pills ">
+      <li class="active"><a data-toggle="pill" href="javascript:void(0)/#religion">Religion</a></li>
+      <li><a  data-toggle="pill" href="javascript:void(0)/#country">Country</a></li>
+      <li><a data-toggle="pill" href="javascript:void(0)/#state">State</a></li>
+      <li><a data-toggle="pill" href="javascript:void(0)/#politics">politics</a></li>
+      <li><a data-toggle="pill" href="javascript:void(0)/#others">others</a></li>
+
+    </ul>
+    <div class="tab-content">
+    <div id="religion" class="tab-pane fade in active" >
+    <div ng-repeat="name in selection" class="selected-item">
+  <h ng-model="teamsitems">{{name.name}}</h>
+ </div>
+      <div class="row" >
+        <div class=" col-xs-3 col-sm-3 col-md-3 col-lg-3" ng-repeat="avatar in avatars1 track by $index"  >
+      <input id="{{avatar.id}}" type="checkbox" checklist-value=
+      "avatar.id"  checklist-model="selected.teams">
+        <img class="img img-rounded" ng-src="{{avatar.picture.avatar}}"
+           id="img" value="{{avatar.id}}" ng-model="team_id"  /><br/>
+        {{avatar.name}}
+       {{avatar.id}}{{selected.teams}}
+              </div>
+      </div> 
+        
+    </div> 
+
+     <div id="country" class="tab-pane fade" >
+     
+      <div class="row" >
+        <div class=" col-xs-3 col-sm-3 col-md-3 col-lg-3" ng-repeat="avatar in avatars2"  >
+          <input id="{{avatar.id}}" type="checkbox" checklist-value=
+      "avatar.id"  checklist-model="selected.teams">
+ 
+
+          <img class="img img-rounded" ng-src="{{avatar.picture.avatar}}"
+           id="img"  /><br/>
+        {{avatar.name}}
+            
+        
+        </div>
+      </div> 
+     </div>
+
+      <div id="state" class="tab-pane fade" >
+      
+      <div class="row" >
+        <div class=" col-xs-3 col-sm-3 col-md-3 col-lg-3" ng-repeat="avatar in avatars3"  >
+         <input id="{{avatar.id}}" type="checkbox" checklist-value=
+      "avatar.id"  checklist-model="selected.teams">
+ 
+
+          <img class="img img-rounded" ng-src="{{avatar.picture.avatar}}"
+           id="img"  />  <br/>
+           {{avatar.name}}     
+        
+        </div>
+      </div> 
+     </div>
+      <div id="politics" class="tab-pane fade" >
+     
+      <div class="row" >
+        <div class=" col-xs-3 col-sm-3 col-md-3 col-lg-3" ng-repeat="avatar in avatars4"  >
+         <input id="{{avatar.id}}" type="checkbox" checklist-value=
+      "avatar.id"  checklist-model="selected.teams">
+ 
+
+          <img class="img img-rounded" ng-src="{{avatar.picture.avatar}}"
+           id="img"  />  <br/>
+           {{avatar.name}}     
+        
+        </div>
+      </div> 
+     </div>
+     <div id="others" class="tab-pane fade" >
+    
+      <div class="row" >
+        <div class=" col-xs-3 col-sm-3 col-md-3 col-lg-3" ng-repeat="avatar in avatars5"  >
+
+         <input id="{{avatar.id}}" type="checkbox" checklist-value=
+      "avatar.id"  checklist-model="selected.teams">
+ 
+
+          <img class="img img-rounded" ng-src="{{avatar.picture.avatar}}"
+           id="img"  />  <br/>
+           {{avatar.name}}     
+        
+        </div>
+      </div> 
+     </div>
+     
+     </div>
+     </div>
+
+        <button type="button" class="btn btn-success" ng-click="joinTeam()">  <span class="glyphicon glyphicon-ok" ></span>&nbsp &nbsp Done</a></button>
+      </div>
