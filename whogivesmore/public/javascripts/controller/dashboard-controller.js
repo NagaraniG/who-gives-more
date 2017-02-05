@@ -7,7 +7,7 @@
     var api=window.localStorage.getItem("CONTACT_AUTH_TOKEN")
     $scope.user=JSON.parse(window.localStorage.getItem('USER_DETAILS'));
     $scope.picture=JSON.parse(window.localStorage.getItem('profile'));
-    console.log($scope.picture.avatar)
+    // console.log($scope.picture.avatar)
     console.log(api)
     console.log('user')
     console.log($scope.user.data.data.email)

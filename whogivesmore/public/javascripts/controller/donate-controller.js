@@ -59,7 +59,7 @@
       $scope.donations.push(response.data.data)
       $scope.total=response.data.total
       console.log("teams Data donatiins")
-      console.log(response.data.data[0].donation.team_id)
+      // console.log(response.data.data[0].donation.team_id)
       $http.get('/teams.json?auth_token='+api).then(function(responseData){
         $scope.teams.push(responseData.data.data)
         console.log("teams Data")

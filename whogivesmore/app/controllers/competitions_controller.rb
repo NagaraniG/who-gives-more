@@ -1,6 +1,6 @@
 class CompetitionsController < ApplicationController
  before_action :set_competition, only: [:show, :edit, :update, :destroy]
-
+# skip_before_action :require_login?
   def index
     @competitions =Competition.all
   end
@@ -17,7 +17,7 @@ class CompetitionsController < ApplicationController
 
   def create
     @competition = Competition.new(competition_params)
-    binding..pry
+    # binding..pry
     respond_to do |format|
       if @competition.save
         format.html { redirect_to @competition, notice: 'competition was successfully created.' }

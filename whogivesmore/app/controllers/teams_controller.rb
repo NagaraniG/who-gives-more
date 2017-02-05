@@ -30,7 +30,7 @@ class TeamsController < ApplicationController
     @team = Team.new(team_params)
     # @team.competitions<<Competition.find(params[:competition_id])
     #@team.competitions.build
-     binding.pry
+     # binding.pry
       respond_to do |format|
         
       if @team.save
@@ -46,7 +46,7 @@ class TeamsController < ApplicationController
  
   def update
     respond_to do |format|
-      binding.pry
+      # binding.pry
       if @team.update(team_params)
         format.html { redirect_to @team, notice: 'Team was successfully updated.' }
         format.json { render :show, status: :ok, data: @team ,location: @team}

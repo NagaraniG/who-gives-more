@@ -4,7 +4,7 @@ angular.module('WhoGivesMoreApp')
   var login = function(email, password) {
     // console.log(CONTACT_AUTH_TOKEN)
     window.localStorage.removeItem('CONTACT_AUTH_TOKEN');
-    $http.post('/users/sign_in', { 'user':{ 'email': email,'password': password }})
+    $http.post('/users/sign_in.json', { 'user':{ 'email': email,'password': password }})
     .then(function (response) {
         console.log(response.data.first_name);
 

@@ -4,6 +4,8 @@
   RegistrationController.$inject = ['$rootScope','$scope', '$http','AuthService', '$location','$resource','Upload'];
     function RegistrationController($rootScope,$scope, $http,AuthService,$location,$resource,Upload){
       console.log(88888)
+          var api=window.localStorage.getItem("CONTACT_AUTH_TOKEN")
+
       $scope.leaderboard=function(){
         $location.path('/leaderboard')
       }

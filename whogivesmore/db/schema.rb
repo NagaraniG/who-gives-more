@@ -33,13 +33,8 @@ ActiveRecord::Schema.define(version: 20170124105855) do
     t.string   "name"
     t.boolean  "custom"
     t.decimal  "percentage"
-    t.datetime "created_at",           null: false
-    t.datetime "updated_at",           null: false
-    t.string   "profile"
-    t.string   "profile_file_name"
-    t.string   "profile_content_type"
-    t.integer  "profile_file_size"
-    t.datetime "profile_updated_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "charties", force: :cascade do |t|
@@ -122,15 +117,6 @@ ActiveRecord::Schema.define(version: 20170124105855) do
     t.index ["user_id"], name: "index_user_baskets_on_user_id", using: :btree
   end
 
-  create_table "user_charties", force: :cascade do |t|
-    t.integer  "user_id"
-    t.integer  "chartie_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["chartie_id"], name: "index_user_charties_on_chartie_id", using: :btree
-    t.index ["user_id"], name: "index_user_charties_on_user_id", using: :btree
-  end
-
   create_table "user_competitions", force: :cascade do |t|
     t.integer  "user_id"
     t.integer  "competition_id"
@@ -166,9 +152,9 @@ ActiveRecord::Schema.define(version: 20170124105855) do
     t.inet     "last_sign_in_ip"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
-    t.string   "auth_token"
     t.json     "team_items",                                       array: true
     t.json     "basket_items",                                     array: true
+    t.string   "auth_token"
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end

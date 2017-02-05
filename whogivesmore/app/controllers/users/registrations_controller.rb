@@ -28,7 +28,7 @@ class Users::RegistrationsController < ApplicationController
     @user = User.new(user_params)
     
     respond_to do |format|
-  binding.pry
+  # binding.pry
     if @user.save
       format.json { render json:{status: :success, data: @user }}
     else
@@ -46,7 +46,7 @@ class Users::RegistrationsController < ApplicationController
     respond_to do |format|
     resource_updated=update_resource(resource, account_update_params)
 
-      binding.pry
+      # binding.pry
     if resource_updated
 
         format.html { redirect_to @user, notice: 'User was successfully updated.' }
@@ -61,7 +61,7 @@ class Users::RegistrationsController < ApplicationController
   def destroy
 
     resource = User.find_for_database_authentication(:email => params[:user][:email])
-    binding.pry
+    # binding.pry
     resource.destroy
     respond_to do |format|
       # format.html { redirect_to users_url, notice: 'User was successfully destroyed.' }
