@@ -20,6 +20,9 @@
     $scope.leaderboard=function(){
       $location.path('/leaderboard')
     }
+    $scope.create=function(){
+      $location.path('/create')
+    }
     $http.get('/teams.json?auth_token='+api).then(function(response){
       $scope.avatars1 = []    
       $scope.avatars2 = []    
@@ -51,21 +54,21 @@
               $scope.avatars4.push($scope.teams[i].team) ;   
             }
           else{
-            $scope.avatars6.push($scope.teams[i].team)
+            $scope.avatars5.push($scope.teams[i].team)
           }
                        
         } 
-        if($scope.teams[i].team.competitions.length==0){
-          console.log("qrkiujr")
-          $scope.avatars5.push($scope.teams[i].team)
-            console.log($scope.avatars5)
-            // window.alert("yu hb")
-          }
+        // if($scope.teams[i].team.competitions.length==0){
+        //   console.log("qrkiujr")
+        //   $scope.avatars5.push($scope.teams[i].team)
+        //     console.log($scope.avatars5)
+        //     // window.alert("yu hb")
+        //   }
          
-        }     
+        // }     
         console.log($scope.teams[0].team.name)
+    }
     })
-
     $scope.selected={
       teams:[]
     }

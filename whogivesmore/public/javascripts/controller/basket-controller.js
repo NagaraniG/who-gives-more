@@ -22,13 +22,20 @@
     $scope.leaderboard=function(){
       $location.path('/leaderboard')
     }
+
+     $scope.selected={
+      baskets:[]
+    }
+    $scope.selected={
+      basket:[]
+    }
     $http.get('/baskets.json?auth_token='+api).then(function(response){
       $scope.recommended=response.data.data[0].basket
       console.log($scope.recommended.picture.avatar)
       $scope.baskets=response.data.data
       $scope.avatars=[]
       console.log($scope.baskets)
-      for(var i=1; i<$scope.baskets.length;i++){
+      for(var i=1; i<9;i++){
         $scope.avatars.push($scope.baskets[i].basket)
       }
       console.log($scope.avatars)
@@ -38,13 +45,13 @@
     $scope.basketlist=[]
     $scope.selectionrecommended=[]
     $scope.selectionspecial=[]
-    $scope.toggleSelect = function(chartieId) {
-      $scope.basketlist.push(chartieId);
+    // $scope.toggleSelect = function(chartieId) {
+    //   $scope.basketlist.push(chartieId);
    
       $scope.chooseChartie=function(){
-        for(var k=0;k<($scope.basketlist).length;k++) {
+        for(var k=0;k<($scope.selected.basket).length;k++) {
  	        console.log("jffdd")
-          $scope.selectionrecommended=$scope.basketlist[k];
+          $scope.selectionrecommended=$scope.selected.basket[k];
          }
         console.log($scope.selectionrecommended)
         var user_params={'email':$scope.user.data.data.email,'basket_items':[$scope.selectionrecommended]};
@@ -58,13 +65,13 @@
           }
         })
       }
-    }
-    $scope.toggleSelection = function(chartieId) {
-      $scope.basketslist.push(chartieId);
+    // }
+    // $scope.toggleSelection = function(chartieId) {
+    //   $scope.basketslist.push(chartieId);
       $scope.chooseCharties=function(){
 
-        for(var l=0;l<($scope.basketslist).length;l++) {
-          $scope.selectionspecial.push($scope.basketslist[l]);
+        for(var l=0;l<($scope.selected.baskets).length;l++) {
+          $scope.selectionspecial.push($scope.selected.baskets[l]);
          }
         console.log($scope.selectionspecial)
         console.log('$scope.selectionspecial')
@@ -79,7 +86,7 @@
           }
         })
       }
-    }
+    // }
     $scope.customBasket=function(){
       $location.path('/create_basket')
     }

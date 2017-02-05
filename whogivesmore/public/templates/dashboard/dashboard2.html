@@ -42,13 +42,13 @@
  </div>
       <div class="row" >
         <div class=" col-xs-3 col-sm-3 col-md-3 col-lg-3" ng-repeat="avatar in avatars1"  >
-        <input id="{{avatar.id}}" type="checkbox" value="{{avatar.id}}" ng-checked="checked" ng-click="toggleSelection(avatar.id)" ng-model="selection">
-        <img class="img img-rounded" ng-src="{{avatar.picture.avatar}}"
+       <input id="{{avatar.id}}" type="checkbox" checklist-value=
+      "avatar.id"  checklist-model="selected.teams">        <img class="img img-rounded" ng-src="{{avatar.picture.avatar}}"
            id="img" value="{{avatar.id}}" ng-model="team_id"  /><br/>
         {{avatar.name}}
        {{avatar.id}}
               </div>
-        <button ><a href="#!/create"><i class="fa fa-plus-square" aria-hidden="true"></i></a></button><br/>New Team
+        <button ng-click="create()"><i class="fa fa-plus-square" aria-hidden="true"></i></button><br/>New Team
       </div> 
         
     </div> 
@@ -57,7 +57,8 @@
      
       <div class="row" >
         <div class=" col-xs-3 col-sm-3 col-md-3 col-lg-3" ng-repeat="avatar in avatars2"  >
-          <input id="{{avatar.id}}" type="checkbox" value="{{avatar.id}}" ng-checked="checked" ng-click="toggleSelection(avatar.id)" ng-model="selection">
+         <input id="{{avatar.id}}" type="checkbox" checklist-value=
+      "avatar.id"  checklist-model="selected.teams">
 
           <img class="img img-rounded" ng-src="{{avatar.picture.avatar}}"
            id="img"  /><br/>
@@ -72,8 +73,8 @@
       
       <div class="row" >
         <div class=" col-xs-3 col-sm-3 col-md-3 col-lg-3" ng-repeat="avatar in avatars3"  >
-        <input id="{{avatar.id}}" type="checkbox" value="{{avatar.id}}" ng-checked="checked" ng-click="toggleSelection(avatar.id)" ng-model="selection">
-
+        <input id="{{avatar.id}}" type="checkbox" checklist-value=
+      "avatar.id"  checklist-model="selected.teams">
           <img class="img img-rounded" ng-src="{{avatar.picture.avatar}}"
            id="img"  />  <br/>
            {{avatar.name}}     
@@ -85,8 +86,8 @@
        
       <div class="row" >
         <div class=" col-xs-3 col-sm-3 col-md-3 col-lg-3" ng-repeat="avatar in avatars4"  >
-        <input id="{{avatar.id}}" type="checkbox" value="{{avatar.id}}" ng-checked="checked" ng-click="toggleSelection(avatar.id)" ng-model="selection">
-
+       <input id="{{avatar.id}}" type="checkbox" checklist-value=
+      "avatar.id"  checklist-model="selected.teams">
           <img class="img img-rounded" ng-src="{{avatar.picture.avatar}}"
            id="img"  />  <br/>
            {{avatar.name}}     
@@ -99,8 +100,8 @@
       <div class="row" >
         <div class=" col-xs-3 col-sm-3 col-md-3 col-lg-3" ng-repeat="avatar in avatars5"  >
          
-        <input id="{{avatar.id}}" type="checkbox" value="{{avatar.id}}" ng-checked="checked" ng-click="toggleSelection(avatar.id)" ng-model="selection">
-
+        <input id="{{avatar.id}}" type="checkbox" checklist-value=
+      "avatar.id"  checklist-model="selected.teams">
           <img class="img img-rounded" ng-src="{{avatar.picture.avatar}}"
            id="img"  />  <br/>
            {{avatar.name}}     

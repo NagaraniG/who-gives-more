@@ -4,6 +4,3 @@
 
 
 
-var app=angular.module('teamsCenter',[]){
-  
-}

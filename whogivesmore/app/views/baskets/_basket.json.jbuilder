@@ -4,6 +4,6 @@ json.basket do
   json.name basket.name
   json.custom basket.custom
   json.percentage basket.percentage
-  json.picture basket.picture.reload
+  json.picture basket.picture
   json.users basket.users.reload 
   end

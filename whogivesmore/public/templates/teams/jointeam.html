@@ -14,7 +14,7 @@
           <li class="one" ng-click="leaderboard()">LEADERBOARD</li>
           <li >MISSION AND VALUES</li>
           <li >HOW IT WORKS</li>
-          <li >LOGIN</li>
+          <li ng-click="logout()">LOGOUT</li>
           <li id="create-active" >
             <i class="fa fa-clipboard" ></i> &nbsp &nbspCreateAnAccount</li>
           <li  id="one" ><i class="fa fa-slideshare"></i>&nbsp &nbspJoinTeams</li>
@@ -47,7 +47,7 @@
         <img class="img img-rounded" ng-src="{{avatar.picture.avatar}}"
            id="img" value="{{avatar.id}}" ng-model="team_id"  /><br/>
         {{avatar.name}}
-       {{avatar.id}}{{selected.teams}}
+       {{avatar.id}}
               </div>
       </div> 
         

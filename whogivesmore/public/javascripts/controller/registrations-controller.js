@@ -46,12 +46,13 @@
       $scope.logIn=function(){
         $location.path('/login')
       }
+     
+      $scope.editUser=function(){
       $scope.user=JSON.parse(window.localStorage.getItem('USER_DETAILS'));
       $scope.firstname=$scope.user.data.data.first_name
       $scope.lastname=$scope.user.data.data.last_name
       $scope.dob=$scope.user.data.data.date
       $scope.email=$scope.user.data.data.email
-      $scope.editUser=function(){
         if ($scope.uploadimage.fileimage.$valid && $scope.file) {
         $scope.upload($scope.file);
         }
@@ -64,8 +65,10 @@
           $scope.firstname,'user[last_name]':$scope.lastname,
             'user[email]':$scope.email}
           }).then(function (resp) {
+            // window.localStorage.setItem("USER_DETAILS",JSON.stringify(resp))
         console.log(resp.data);
         if(resp.data.status=="ok"){
+          
           storeUserPicture(resp.data.picture);
           $location.path('/showcase')
         }
@@ -77,6 +80,7 @@
     } ;
 
     function storeUserPicture(picture){
+      // window.localStorage.setItem("USER_DETAILS",JSON.stringify(resp))
       window.localStorage.setItem('profile',JSON.stringify(picture))
     }
    $scope.logout = function()

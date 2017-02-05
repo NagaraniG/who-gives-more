@@ -31,12 +31,13 @@
 <div class="container first">
     <label class="option1">Option 1-Recommended Basket</label>
     <div class="recommended" ng-init="recommended">
-    <input id="{{recommended.id}}" type="checkbox" value="{{recommended.id}}" ng-checked="" ng-click="toggleSelect(recommended.id)" ng-model="selectionrecommended">
-
+    <input id="{{recommended.id}}" type="checkbox" checklist-value=
+      "recommended.id"  checklist-model="selected.basket">
+    
       <img class="img img-rounded" ng-src="{{recommended.picture.avatar}}"  />
       <br/>
       {{recommended.name}} 
-      {{recommended.id}}
+     
       <br/>
       <p>We recommend this diverse basket of trusted charties carefully chosen for their high <br/>humanitarian imapact,financial responsibility  track record of ethical practices</p>
       <button type="button" class="btn btn-success"  ng-click="chooseChartie()">  <span class="glyphicon glyphicon-ok"></span>&nbsp &nbsp Use this Basket</button>
@@ -49,7 +50,9 @@
       <p>Or you can choose one or more baskets devoted to a specific cause</p>
        <div class="row">
         <div class=" col-xs-3 col-sm-3 col-md-3 col-lg-3" ng-repeat="avatar in avatars">
-        <input id="{{avatar.id}}" type="checkbox" value="{{avatar.id}}"  ng-click="toggleSelection(avatar.id)" ng-model="selectionspecial">
+       <input id="{{avatar.id}}" type="checkbox" checklist-value=
+      "avatar.id"  checklist-model="selected.baskets">
+ 
           <img class="img img-rounded" ng-src="{{avatar.picture.avatar}}" id="img" /><br/>
           {{avatar.name}}           
         </div>

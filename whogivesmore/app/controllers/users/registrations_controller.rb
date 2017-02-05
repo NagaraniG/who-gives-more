@@ -1,6 +1,6 @@
 class Users::RegistrationsController < ApplicationController
   before_action :set_user, only: [:show, :edit]
-  skip_before_action :require_login?,only:[:create]
+  skip_before_action :require_login?#,only:[:create]
   # skip_before_action :require_no_authentication
 
 
